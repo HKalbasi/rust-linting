@@ -11,7 +11,7 @@ pub struct AstContext<'ast> {
 
 #[cfg(feature = "driver-api")]
 impl<'ast> AstContext<'ast> {
-    pub fn new(cx: &'ast dyn DriverContext<'ast>) -> Self {
+    pub const fn new(cx: &'ast dyn DriverContext<'ast>) -> Self {
         Self { cx }
     }
 }
